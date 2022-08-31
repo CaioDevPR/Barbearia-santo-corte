@@ -1,0 +1,92 @@
+*{ 
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+}
+
+.fa-brands{ 
+    padding: 10px;
+    position: relative;
+    bottom: 10px;
+   
+}
+
+
+nav{
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: #000;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 10%;
+}
+nav .logo{
+color: #ffc35a;
+font-size: 30px;
+font-weight: 600;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li{
+margin: 0 5px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px ;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+     
+}
+
+li:nth-child(5) > a:nth-child(2) {
+   border: 1px solid #edc065;
+   border-radius: 0;
+   
+}
+li:nth-child(5) > a:nth-child(1) {
+  
+    border: 1px solid;
+    border-radius: 0;
+}
+li:nth-child(5) > a:nth-child(1):hover {
+    color: #000;
+    background-color: #fff;
+   }
+
+nav ul li a.active,
+nav ul li a:hover{
+color:#ffc35a;
+}
+
+nav .menu-btn i{
+    color: rebeccapurple;
+    cursor: pointer;
+    display: none;
+}
+
+@keyframes rotate{
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
