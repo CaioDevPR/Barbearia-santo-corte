@@ -1,30 +1,44 @@
-var ul = document.querySelector('nav ul');
-var menuBtn = document.querySelector('.menu-btn i');
-
-function menuShow() {
-    if (ul.classList.contains('open')) {
-    ul.classList.remove('open');
-    }else{
-        ul.classList.add('open');
+class MobileNavbar {
+    constructor(mobileMenu, navList, navLinks) {
+      this.mobileMenu = document.querySelector(mobileMenu);
+      this.navList = document.querySelector(navList);
+      this.navLinks = document.querySelectorAll(navLinks);
+      this.activeClass = "active";
+  
+      this.handleClick = this.handleClick.bind(this);
     }
-}
-
-var {a,b,c} = { a:5,b:6,c:7}
-
-
-function debounce(func, wait, immediate) {
-    let timeout;
-    return function (...args) {
-        const context = this;
-        const later = function () {
-            timeout = null;
-            if (!immediate)
-                func.apply(context, args);
-        };
-        const callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow)
-            func.apply * (context, args);
-    };
-}
+  
+    animateLinks() {
+      this.navLinks.forEach((link, index) => {
+        link.style.animation
+          ? (link.style.animation = "")
+          : (link.style.animation = `navLinkFade 0.5s ease forwards ${
+              index / 7 + 0.3
+            }s`);
+      });
+    }
+  
+    handleClick() {
+      this.navList.classList.toggle(this.activeClass);
+      this.mobileMenu.classList.toggle(this.activeClass);
+      this.animateLinks();
+    }
+  
+    addClickEvent() {
+      this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+  
+    init() {
+      if (this.mobileMenu) {
+        this.addClickEvent();
+      }
+      return this;
+    }
+  }
+  
+  const mobileNavbar = new MobileNavbar(
+    ".mobile-menu",
+    ".nav-list",
+    ".nav-list li",
+  );
+  mobileNavbar.init();
