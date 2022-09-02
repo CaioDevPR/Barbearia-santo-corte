@@ -9,9 +9,15 @@ text-decoration: none;
     margin: 0;
     padding: 0;
   }
-  
+  body{
+    background-image: url(/imagens/backgroundst.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+  }
   a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     transition: 0.3s;
   }
@@ -31,10 +37,17 @@ text-decoration: none;
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #000;
-    height: 8vh;
+    background: #fff;
+    height:7vh;
   }
-  
+
+  /* imagem logo central */
+  img:nth-child(2) {
+    position: relative;
+    top: 85%
+   }
+
+   /* main*/
   main {
     background: url("bg.jpg") no-repeat center center;
     background-size: cover;
@@ -63,6 +76,9 @@ text-decoration: none;
     margin: 8px;
     transition: 0.3s;
   }
+  .nav-list{
+    display: non;
+  }
   
   @media (max-width: 999px) {
     body {
@@ -85,6 +101,7 @@ text-decoration: none;
       margin-left: 0;
       opacity: 0;
     }
+
     .mobile-menu {
       display: block;
     }
@@ -115,4 +132,24 @@ text-decoration: none;
   
   .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 500px) {
+   .logo {
+    display: none;
+   }
+   img:nth-child(2) {
+    position: relative;
+    top: 40px;
+    width: 24%;
+    right: 7%;
+   } 
+   .mobile-menu div {
+    width: 15px;
+    height: 1px;
+    background: #000;
+    margin: 5px;
+    transition: 0.3s;
+  }
+ 
   }
