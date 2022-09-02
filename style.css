@@ -135,7 +135,10 @@ text-decoration: none;
   }
 
   @media screen and (min-width: 300px) and (max-width: 500px) {
-   .logo {
+   body{
+    overflow: hidden;
+   }
+    .logo {
     display: none;
    }
    img:nth-child(2) {
