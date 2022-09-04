@@ -249,7 +249,7 @@ margin: 7px;
   }
     }
 
-  @media screen and (min-width: 413px) and (max-width: 736px) {
+  @media screen  and (max-width: 736px) {
     .agendamento a:nth-child(3){
       font-size: 10px;
       position: relative;
