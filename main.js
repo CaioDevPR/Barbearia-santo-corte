@@ -42,3 +42,17 @@ class MobileNavbar {
     ".nav-list li",
   );
   mobileNavbar.init();
+
+
+ function typewriter(elemento){
+  const textoArray = elemento.innerHTML.split('');
+  elemento.innerHTML = '';
+  textoArray.forEach((letra, i) => {
+    setTimeout(() => elemento.innerHTML += letra, 55 * i );
+  });
+ }
+
+
+  const titulo = document.querySelector('agendamento,h1')
+  
+  typewriter(titulo);
