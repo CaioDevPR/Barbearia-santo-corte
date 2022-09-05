@@ -257,7 +257,7 @@ text-decoration: none;
 
 
 
-@media screen and (min-width: 300px) and (max-width: 421px) {
+@media screen and (min-width: 300px) and (max-width: 430px) {
   body {
     overflow-x: hidden;
   }
@@ -286,7 +286,7 @@ text-decoration: none;
   }
 
   .agendamento a:nth-child(3) {
-    font-size: 8px;
+    font-size: 10px;
 
   }
 
