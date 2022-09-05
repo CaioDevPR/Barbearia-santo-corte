@@ -257,7 +257,7 @@ text-decoration: none;
 
 
 
-@media screen and (min-width: 300px) and (max-width: 430px) {
+@media screen and (min-width: 300px) and (max-width: 769px) {
   body {
     overflow-x: hidden;
   }
